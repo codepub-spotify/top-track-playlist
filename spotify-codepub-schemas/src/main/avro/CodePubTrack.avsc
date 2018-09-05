@@ -1,0 +1,33 @@
+[
+ {
+     "name": "CodePubTrack",
+     "namespace": "com.spotify.data.api.schemas",
+     "type": "record",
+     "fields": [
+         {
+             "name": "id",
+             "type": "string"
+         },
+         {
+             "name": "name",
+             "type": "string"
+         },
+         {
+             "name": "uri",
+             "type": "string"
+         },
+         {
+             "name": "explicit",
+             "type": "boolean"
+         },
+         {
+             "name": "popularity",
+             "type": "int"
+         },
+         {
+             "name": "duration_ms",
+             "type": "int"
+         }
+     ]
+ }
+]

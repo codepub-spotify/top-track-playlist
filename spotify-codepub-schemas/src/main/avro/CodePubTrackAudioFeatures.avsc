@@ -1,0 +1,57 @@
+[
+ {
+     "name": "CodePubTrackAudioFeatures",
+     "namespace": "com.spotify.data.api.schemas",
+     "type": "record",
+     "fields": [
+         {
+             "name": "id",
+             "type": "string"
+         },
+         {
+             "name": "uri",
+             "type": "string"
+         },
+         {
+             "name": "energy",
+             "type": "float"
+         },
+         {
+             "name": "liveness",
+             "type": "float"
+         },
+         {
+             "name": "instrumentalness",
+             "type": "float"
+         },
+         {
+             "name": "loudness",
+             "type": "float"
+         },
+         {
+             "name": "danceability",
+             "type": "float"
+         },
+         {
+             "name": "speechiness",
+             "type": "float"
+         },
+         {
+             "name": "acousticness",
+             "type": "float"
+         },
+         {
+             "name": "valence",
+             "type": "float"
+         },
+         {
+             "name": "tempo",
+             "type": "float"
+         },
+         {
+            "name": "mode",
+            "type": "int"
+         }
+     ]
+ }
+]
