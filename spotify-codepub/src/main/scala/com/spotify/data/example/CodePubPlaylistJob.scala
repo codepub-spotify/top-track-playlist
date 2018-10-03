@@ -20,7 +20,9 @@ object CodePubPlaylistJob {
     val topTracksRequest: Seq[CodePubTrack] = SpotifyApiCaller.getTopTracks()
 
     // Step1. Extract the IDs from your top tracks
-    val ids = topTracksRequest.map(???)
+    // First check how `CodePubTrack.avsc` looks like and remember Avro magic from slides!
+    // Here's one more hint: use `.toString` to convert to String.
+    val ids: Seq[String] = topTracksRequest.map(???)
 
     // Get audio features for your top tracks
     val topTrackAudioFeatures: Seq[CodePubTrackAudioFeatures] = SpotifyApiCaller.getTrackAudioFeatures(ids)
@@ -28,9 +30,14 @@ object CodePubPlaylistJob {
     sc
       // Convert your top track audio features to an SCollection
       .parallelize(topTrackAudioFeatures)
-      // Step2. Use a filter to find your most danceable favorite songs
+      // Step2. Use a filter to select your mood of the playlist.
+      // Check out `CodePubTrackAudioFeatures.avsc` schema and explore which features are available.
+      // You already have some recipes inside slides.
+      // For example, I'd like to create a playlist for dance with danceability > 0.7 songs
+      // BE CREATIVE!!
       .filter(???)
       // Step3. Extract the track IDs
+      // You need schema here again. We did the similar thing already, right?
       .map(???)
       // Save the results to a text file
       // DISCLAIMER: We need to save it as a text file in order for the playlist API call to
